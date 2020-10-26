@@ -1,0 +1,302 @@
+extends layout/main
+
+block variables
+	-var title = 'Главная страница'
+
+block content
+	.bg.bg-main
+	section.offer 
+		.container
+			img.offer-img-mob(src="img/bg-mob.png", alt="bg")
+			.d-flex
+				.offer-content
+					h1.fs-40.fw-bold Можно зарабатывать безопасно без риска потери денег
+					hr
+					p.fs-18 Лорем ипсум долор сит амет, яуо цу яуас анимал долорес, яуандо сцрипта анциллае.
+					.flex-center-between 
+						a.btn.bg-red(href="#")
+							|Подробнее
+							+icon("arrow-right")
+						a.btn.bg-yellow(href="#")
+							|Расчет дохода
+							+icon("calculator")
+
+					button.btn-scroll(type="button")
+						+icon("scroll")
+				.offer-right 
+					.bg-1
+	section.products
+		.number.number_v1 01.
+		.products-content
+			h2.fs-40.fw-bold.text-center Наши продукты
+				+icon("title_element", "title-shape")
+			.flex-wrap.slider.slider-product
+				.card 
+					.circle-top 
+						+icon("money")
+					.card-border
+					.card-content
+						h3.fs-25.fw-bold Консервативный Трейдинг
+						.percent
+							.percent-content
+								p.fs-14.c-yellow.text-up.fw-semi Прибыль от
+								p.c-yellow
+									span.fs-40.fw-semi +
+									span.fs-50.fw-bold 9
+									span.fs-35.fw-semibold %
+						.text-programs
+							p.fs-14.text-up.fw-bold Агентская программа
+							p.fs-14 USDT, BTC и ETH
+						a.btn.bg-red(href="#")
+							|Подробнее
+							+icon("arrow-right")
+				.card 
+					.circle-top 
+						+icon("graph")
+					.card-border
+					.card-content
+						h3.fs-25.fw-bold Маржинальная торговля
+						.percent
+							.percent-content
+								p.fs-14.c-yellow.text-up.fw-semi Прибыль от
+								p.c-yellow
+									span.fs-40.fw-semi +
+									span.fs-50.fw-bold 25
+									span.fs-35.fw-semibold %
+						.text-programs
+							p.fs-14.text-up.fw-bold Агентская программа
+							p.fs-14 Только USDT
+						a.btn.bg-red(href="#")
+							|Подробнее
+							+icon("arrow-right")
+				.card 
+					.circle-top 
+						+icon("api")
+					.card-border
+					.card-content
+						h3.fs-25.fw-bold Торговля 
+							span.nowrap через API
+						.percent
+							.percent-content
+								p.fs-14.c-yellow.text-up.fw-semi Прибыль от
+								p.c-yellow
+									span.fs-40.fw-semi +
+									span.fs-50.fw-bold 15
+									span.fs-35.fw-semibold %
+						.text-programs
+							p.fs-14.text-up.fw-bold Агентская программа
+							p.fs-14 Только в USDT и BTC
+						a.btn.bg-red(href="#")
+							|Подробнее
+							+icon("arrow-right")
+	section.section-calculator 
+		.bg.bg-2
+		.number.number_v2 02.
+		.container 
+			.section-calculator__content 
+				h2.fs-40.fw-bold.text-center Калькулятор прибыли
+					+icon("title_element", "title-shape")
+				.justify-content-between.flex-wrap
+					form.calculator
+						.d-flex 
+							label.calculator-checkboxes
+								input.checkbox(type="radio" name="radio-1")
+								span.check-head Маржинальная торговля
+							label.calculator-checkboxes
+								input.checkbox(type="radio" name="radio-1" checked)
+								span.check-head Консервативный Трейдинг
+						.calculator__content
+							.calculator__item 
+								.d-flex
+									label.payment
+										input.checkbox(type="radio" name="radio-2" checked)
+										span.check-payment 
+											span.check-payment__circle 
+												+icon("bitcoin")
+											span.fs-16.fw-medium BTC
+									label.payment
+										input.checkbox(type="radio" name="radio-2")
+										span.check-payment 
+											span.check-payment__circle 
+												+icon("ethereum")
+											span.fs-16.fw-medium ETH
+									label.payment
+										input.checkbox(type="radio" name="radio-2")
+										span.check-payment 
+											span.check-payment__circle 
+												+icon("dollar")
+											span.fs-16.fw-medium USDT
+							.calculator__item 
+								.flex-center-between 
+									p.fs-18.fw-bold Количество
+									+icon("arrow-right", "arrow-amount")
+									input.input_v2(type="text" value="1")
+
+								#range.range
+								.flex-center-between.amounts_v1
+									.amount
+										p.fs-10 0,0092
+									.amount
+										p.fs-10 0,0920
+									.amount
+										p.fs-10 0,4601
+									.amount
+										p.fs-10 0,9201
+									.amount
+										p.fs-10 4,6007
+									.amount
+										p.fs-10 9,2013
+									.amount
+										p.fs-10 23,0033
+							.calculator__item 
+								.flex-center-between 
+									p.fs-18.fw-bold За какой период
+									+icon("arrow-right", "arrow-amount")
+									select.select_v2 
+										option(value="12 месяцев") 12 месяцев
+										option(value="11 месяцев") 11 месяцев
+										option(value="10 месяцев") 10 месяцев
+
+								#range_v2.range
+								.flex-center-between.amounts_v2
+									.amount
+										p.fs-10 3
+									.amount
+										p.fs-10 6
+									.amount
+										p.fs-10 9
+									.amount
+										p.fs-10 12
+									.amount
+										p.fs-10 18
+							.income-info.flex-wrap
+								.income.text-center 
+									p.fs-16 Ваша прибыль
+									p.fs-18.fw-bold.c-yellow 1.2542 BTC
+								.income.text-center 
+									p.fs-16 Общая прибыль
+									p.fs-18.fw-bold.c-yellow 2.2044 BTC
+							button.btn.bg-red.w-100(type="submit")
+								|Инвестируй сейчас
+								+icon("arrow-right")
+					.advantages
+						.px-15-sm
+							h3.fs-25.fw-bold Преимущества 
+								span.c-red AlfaTrade
+							hr
+						ul.advantages-list 
+							li.advantages-item
+								a.d-flex(href="#") 
+									span.fs-30.fw-bold.c-red 01.
+									span.fs-18 Количественный и качественный анализ рыночных данных!
+										+icon("arrow-right")
+							li.advantages-item
+								a.d-flex(href="#") 
+									span.fs-30.fw-bold.c-red 02.
+									span.fs-18 Более 10 лет опыта управления активами!
+										+icon("arrow-right")
+							li.advantages-item
+								a.d-flex(href="#") 
+									span.fs-30.fw-bold.c-red 03.
+									span.fs-18 Фирменная технология и программные решения!
+										+icon("arrow-right")
+							li.advantages-item
+								a.d-flex(href="#") 
+									span.fs-30.fw-bold.c-red 04.
+									span.fs-18 Лучшее соотношение риска и прибыли!
+										+icon("arrow-right")
+							li.advantages-item
+								a.d-flex(href="#") 
+									span.fs-30.fw-bold.c-red 05.
+									span.fs-18 Агентская программа для парнтеров фонда!
+										+icon("arrow-right")
+							li.advantages-item
+								a.d-flex(href="#") 
+									span.fs-30.fw-bold.c-red 06.
+									span.fs-18 Максимальная прозрачность операций!
+										+icon("arrow-right")
+	section.review
+		.number.number_v3 03.
+		.container 
+			h2.fs-40.fw-bold.text-center Отзывы клиентов
+				+icon("title_element", "title-shape")
+			.slider.slider-review
+				.slide
+					img.slide-bg(src="img/rounded-slide.png", alt="bg")
+					img.avatar(src="img/avatar.jpg", alt="avatar")
+					.slide__content
+						div
+							.text-center
+								p.fs-18.fw-medium Заррух Кодиров
+								p.c-gray В системе 14 дней
+							.flex-center-center 
+								hr
+							p.text-between.text-center-last.line-clamp Лорем ипсум долор сит амет, ет нам алиа утрояуе. Яуот аугуе либер цу иус, сале цетерос фиерент не яуи. Ат нам номинати цонсеяуунтур. Пер еа иуварет апеириан интерпретарис, ин цум зрил хабемус диссентиет.
+						p.c-gray.mt-20.text-center 1 час назад
+				.slide
+					img.slide-bg(src="img/rounded-slide.png", alt="bg")
+					img.avatar(src="img/avatar.jpg", alt="avatar")
+					.slide__content
+						div
+							.text-center
+								p.fs-18.fw-medium Юрий Краставский
+								p.c-gray В системе 6 месяцев
+							.flex-center-center 
+								hr
+							p.text-between.text-center-last.line-clamp Ин хис фугит сенсибус. При ат елит модус ипсум, те еверти алияуид омиттантур еос, еу елитр омиттам про. Еам еа цибо порро, яуас партиендо еа дуо, еу меа тритани лаборамус.
+						p.c-gray.mt-20.text-center 26.09.2020
+				.slide
+					img.slide-bg(src="img/rounded-slide.png", alt="bg")
+					img.avatar(src="img/avatar.jpg", alt="avatar")
+					.slide__content
+						div
+							.text-center
+								p.fs-18.fw-medium Заррух Кодиров
+								p.c-gray В системе 14 дней
+							.flex-center-center 
+								hr
+							p.text-between.text-center-last.line-clamp Лорем ипсум долор сит амет, ет нам алиа утрояуе. Яуот аугуе либер цу иус, сале цетерос фиерент не яуи. Ат нам номинати цонсеяуунтур. Пер еа иуварет апеириан интерпретарис, ин цум зрил хабемус диссентиет.
+						p.c-gray.mt-20.text-center 1 час назад
+				.slide
+					img.slide-bg(src="img/rounded-slide.png", alt="bg")
+					img.avatar(src="img/avatar.jpg", alt="avatar")
+					.slide__content
+						div
+							.text-center
+								p.fs-18.fw-medium Заррух Кодиров
+								p.c-gray В системе 14 дней
+							.flex-center-center 
+								hr
+							p.text-between.text-center-last.line-clamp Лорем ипсум долор сит амет, ет нам алиа утрояуе. Яуот аугуе либер цу иус, сале цетерос фиерент не яуи. Ат нам номинати цонсеяуунтур. Пер еа иуварет апеириан интерпретарис, ин цум зрил хабемус диссентиет.
+						p.c-gray.mt-20.text-center 1 час назад
+	section.partners
+		.number.number_v4 04.
+		.container
+			h2.fs-40.fw-bold.text-center Наши партнеры
+				+icon("title_element", "title-shape")
+		.partners-slider 
+			button.partners-item(type="button")
+				img(src="img/logotip_loko_banka.png", alt="partners")
+			button.partners-item(type="button")
+				img(src="img/partners_1.png", alt="partners")
+			button.partners-item(type="button")
+				img(src="img/logotip_loko_banka.png", alt="partners")
+			button.partners-item(type="button")
+				img(src="img/partners_2.png", alt="partners")
+			button.partners-item(type="button")
+				img(src="img/partners_1.png", alt="partners")
+			button.partners-item(type="button")
+				img(src="img/partners_2.png", alt="partners")
+			button.partners-item(type="button")
+				img(src="img/partners_1.png", alt="partners")
+			button.partners-item(type="button")
+				img(src="img/partners_1.png", alt="partners")
+
+		.partners__offer 
+			.partners__offer-left
+				img.partners__offer-img_mob(src="img/bg-partners.png", alt="img")
+				img.partners__offer-img(src="img/bg_3.png", alt="bg")
+			.partners__offer-right 
+				p.fs-40.fw-bold Начните <br> инвестировать <br> сейчас
+				a.btn.bg-red(href="#") Регистрация
+					+icon("arrow-right")

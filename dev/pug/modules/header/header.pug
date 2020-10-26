@@ -1,0 +1,54 @@
+header.header 
+    .container 
+        .flex-center-between
+            button.burger(type="button")
+                span.burger-line.burger-top 
+                span.burger-line.burger-center
+                span.burger-line.burger-bottom
+            a.logo(href="#")
+                img.logo-icon(src="img/logo.svg", alt="logo")
+            nav.topbar
+                ul.menu 
+                    li.menu-item 
+                        a.menu-link.active(href="#") Компания
+                    li.menu-item 
+                        a.menu-link(href="#") Контент
+                    li.menu-item 
+                        a.menu-link(href="#") Наши продукты
+                    li.menu-item 
+                        a.menu-link(href="#") Партнерство
+                    li.menu-item 
+                        a.menu-link(href="#") Инвестиции
+                    li.menu-item 
+                        a.menu-link(href="#") Мероприятия
+            .btns 
+                a.align-items-center(href="#")
+                    +icon("add-user")
+                    |Войти
+                a.align-items-center(href="#")
+                    +icon("enter")
+                    |Регистрация
+            a.add-user(href="#")
+                +icon("add-user")
+            select 
+                option(value="Руc") Руc
+                option(value="Eng") Eng
+                
+nav.sidebar 
+    ul.sidebar-list
+        li.sidebar-item 
+            a.social(href="#")
+                +icon("telegram-plane")
+        li.sidebar-item 
+            a.social(href="#")
+                +icon("whatsapp")
+        li.sidebar-item 
+            a.social(href="#")
+                +icon("facebook")
+        li.sidebar-item 
+            a.social(href="#")
+                +icon("vk")
+        li.sidebar-item 
+            a.social(href="#")
+                +icon("instagram")
+

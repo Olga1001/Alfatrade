@@ -1,0 +1,51 @@
+.btns
+    display: flex 
+    line-height: 50px
+    background-color: #f1c40f
+    border-radius: 25px
+    a 
+        padding: 0 15px 
+        border-right: 1px solid rgba(#000000, 0.07)
+        font-size: 14px
+        font-weight: 500
+        color: #14181f
+        &:last-child
+            border-right: none
+        svg 
+            width: 16px 
+            height: 16px
+            margin-right: 10px
+            fill: #14191f
+
+.btn-scroll 
+    position: absolute 
+    left: 50% 
+    transform: translateX(-50%)
+    bottom: 25px
+    background: transparent 
+    svg 
+        width: 20px
+        height: 30px
+        fill: #ffffff
+
+.btn 
+    line-height: 60px
+    background-color: #e30000
+    border-radius: 30px
+    padding: 0 20px 0 30px
+    font-size: 18px
+    display: block 
+    width: fit-content
+    position: relative
+    svg 
+        width: 20px 
+        height: 20px
+        margin-left: 15px
+    &.bg-red
+        color: #ffffff
+        svg
+            fill: #ffffff
+    &.bg-yellow 
+        color: #151a21
+        svg
+            fill: #151a21 

@@ -1,0 +1,109 @@
+
+.calculator
+    max-width: 446px
+    width: 100%
+    background-color: #1b2129
+    box-shadow: 0px 0px 50px 0px rgba(1,1,1,0.2)
+    border-radius: 10px
+    overflow: hidden
+    margin-top: 30px
+    margin-right: 30px
+    &-checkboxes
+        width: 50%
+        display: block
+        border-bottom: 3px solid #f1c40f
+    &__content 
+        padding: 0 30px 30px 30px
+    &__item 
+        padding: 30px 0
+        border-bottom: 1px solid #232b35
+
+.check-head
+    background-color: #1b2129
+    padding: 30px 25px 
+    font-size: 18px
+    line-height: 1.2
+    font-weight: 700
+    color: #ffffff
+    display: block
+    cursor: pointer
+
+.payment 
+    width: calc(33.33% - 7px) 
+    margin-right: 10px
+    height: 38px
+    background-color: #232b35
+    border-radius: 19px
+    &:last-child
+        margin-right: 0
+
+.check-payment 
+    display: flex 
+    align-items: center
+    padding: 6px 7px
+    height: 100%
+    width: 100%
+    border-radius: 19px
+    text-align: center
+    cursor: pointer
+    .fs-16 
+        width: calc(100% - 26px)
+    span 
+        display: block
+    &__circle 
+        width: 26px
+        height: 26px
+        background-color: #ffffff
+        border-radius: 50%
+        flex-shrink: 0
+        svg
+            width: 20px
+            height: 100%
+            margin: 0 auto
+            fill: #12161c
+            display: block
+
+.arrow-amount 
+    width: 20px
+    height: 20px
+    fill: #f1c40f
+    margin: 0 10px
+
+.amount 
+    position: relative
+    padding-top: 40px 
+    &:first-child
+        margin-left: -13px
+    &:last-child
+        margin-right: -17px
+    &:before 
+        content: ''
+        position: absolute 
+        left: 50% 
+        top: 10px 
+        transform: translateX(-50%)
+        width: 1px 
+        height: 18px 
+        background-color: #232b35
+
+.amounts_v2
+    .amount
+        &:first-child
+            margin-left: 0
+        &:last-child
+            margin-right: -3px
+
+.income 
+    width: calc(50% - 10px)
+    background-color: #232b35
+    border-radius: 3px
+    margin-right: 20px 
+    height: 94px 
+    display: flex 
+    flex-direction: column 
+    justify-content: center
+    &-info 
+        padding: 30px 0
+    &:nth-child(2n+2)
+        margin-right: 0
+        

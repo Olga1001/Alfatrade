@@ -1,0 +1,508 @@
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/sprite";
+
+body 
+  height: 100%
+  font-size: 18px
+  line-height: 1.2
+  font-weight: 400
+  font-family: "Montserrat", sans-serif
+  font-style: normal
+  color: #ffffff
+  background: #12161c
+  overflow-x: hidden
+
+*, *::before, *::after
+  box-sizing: border-box
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button 
+  -webkit-appearance: none
+  margin: 0
+
+/* Firefox */
+input[type=number]
+  -moz-appearance: textfield
+
+
+*::-webkit-input-placeholder
+  font-family: "Montserrat", sans-serif
+  font-size: 16px
+  line-height: 22px
+  font-weight: 400
+  color: #b3b3b3
+
+*:-moz-placeholder
+  font-family: "Montserrat", sans-serif
+  font-size: 16px
+  line-height: 22px
+  font-weight: 400
+  color: #b3b3b3
+
+*::-moz-placeholder
+  font-family: "Montserrat", sans-serif
+  font-size: 16px
+  line-height: 22px
+  font-weight: 400
+  color: #b3b3b3
+
+*:-ms-input-placeholder
+  font-family: "Montserrat", sans-serif
+  font-size: 16px
+  line-height: 22px
+  font-weight: 400
+  color: #b3b3b3
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul
+  margin: 0
+  padding: 0
+  font-weight: normal
+
+ol, ul 
+  list-style: none
+
+img 
+  max-width: 100%
+  display: block
+  object-fit: contain
+
+input, button, textarea, select
+  font: inherit
+
+button 
+    padding: 0
+    cursor: pointer
+    border: none
+    
+audio, canvas, iframe, img, svg, video, textarea
+  vertical-align: middle
+
+textarea
+  resize: none
+  width: 100%
+  appearance: none
+
+section
+  position: relative
+
+input, select, button, textarea 
+  outline: none
+  appearance: none
+
+a 
+  color: #707d8c
+  text-decoration: none
+  transition: all 0.3s ease
+  outline: none
+  &:hover 
+    color: #ffffff
+
+p 
+  font-size: 16px 
+  line-height: 22px 
+
+input
+  background-color: #ffffff
+  border: 1px solid #e6e6e6
+  border-radius: 25px
+  line-height: 22px 
+  padding: 19px
+  font-size: 16px
+  font-weight: 400
+  color: #12161c
+
+.input_v2 
+  border-radius: 3px
+  line-height: 1.2
+  border: none
+  text-align: center
+  padding: 8px
+  width: 130px
+
+.container 
+  max-width: 1140px
+  padding: 0 15px
+  width: 100% 
+  margin: 0 auto
+
+select 
+  font-family: "Montserrat", sans-serif
+  font-size: 14px
+  line-height: 12px
+  font-weight: 400
+  color: #ffffff
+  background: transparent url("../img/angle-down.svg") no-repeat right center / 10px
+  border: none 
+  padding-right: 16px
+  border-radius: 3px
+  cursor: pointer
+  &:focus, &:active 
+    background-image: url("../img/angle-up.svg")
+  option 
+    background-color: transparent!important
+    color: #707d8c
+
+.select_v2
+  padding: 11px 25px 11px 11px
+  background-color: #232b35
+  background-position: right 10px center
+
+select option[value] 
+  background-color: transparent!important
+
+option:not(:checked)
+  background-color: transparent
+
+hr 
+  width: 95px
+  height: 4px
+  background-color: #e30000
+  border-radius: 2px
+  margin: 31px 0
+  padding: 0
+  border: none
+
+.offer 
+  // min-height: calc(100vh - 100px)
+  overflow: hidden
+  padding: 12.5vh 0 165px 0
+  position: relative
+  &-content
+    max-width: 440px 
+    margin-left: 95px
+    .btn 
+      margin-top: 63px
+  &-right 
+    position: relative
+    width: 50%
+.bg-1
+  position: absolute
+  left: -293px
+  top: -154px
+  width: 1146px
+  height: 901px
+  flex-shrink: 0
+  background: url("../img/bg-1.png") no-repeat center
+  pointer-events: none
+  z-index: -1
+
+.number 
+  font-size: 100px
+  line-height: 1
+  font-weight: 700
+  color: #1b2129
+  position: absolute 
+  left: 30px
+  top: 0
+  text-align: left 
+  display: block
+  &_v1 
+    top: 80px
+  &_v2 
+    top: 60px
+  &_v3, &_v4
+    top: 90px
+  
+
+.products
+  padding: 25px 0
+  &-content
+    background-color: #1b2129
+    box-shadow: 0px 0px 50px 0px rgba(1,1,1,0.2)
+    border-radius: 10px
+    padding: 60px 84px
+    max-width: 1146px
+    width: 100% 
+    margin: 0 auto
+    .slick-dots
+      display: none
+
+.bg
+  position: absolute 
+  top: 0
+  left: 0
+  width: 100%
+  object-fit: cover
+  z-index: -1
+  background: no-repeat center / cover
+  border: none
+
+.bg-main
+  background-image: url("../img/bg.png")
+  opacity: 0.1
+  height: 476px
+
+.bg-2
+  top: auto 
+  bottom: 0 
+  height: 827px
+  background-position-y: top
+  background-image: url("../img/bg_2.png")
+
+.title-shape 
+  display: block 
+  margin: 0 auto
+  height: 60px
+  fill: #f0b90b
+
+.checkbox 
+  display: none 
+  &:checked ~ .check-head
+    background-color: #f1c40f
+    color: #12161c
+  &:checked ~ .check-payment 
+    background-color: #ffffff
+    color: #12161c
+    .check-payment__circle 
+      background-color: #f1c40f
+    
+.section-calculator__content 
+  padding: 60px 0
+
+.advantages
+  margin-top: 30px
+  max-width: 446px
+  width: 100%
+  &-item
+    padding: 0 20px
+    border-radius: 10px
+    transition: all 0.3s ease
+    &:hover 
+      background-color: #232b35
+    a 
+      padding: 35px 0
+      border-bottom: 1px solid #232b35
+    &:last-child a 
+      border: none 
+    .fs-30
+      margin-right: 30px
+    svg 
+      display: inline
+      width: 20px
+      height: 20px
+      fill: #e30000
+      margin-left: 15px
+
+.review 
+  background-color: #0b0e11
+  padding: 90px 0 45px
+  .container
+    max-width: 1190px 
+  .slide
+    width: 350px
+
+.avatar 
+  margin: 0 auto -62.5px 
+  width: 125px
+  height: 125px
+  background-color: #c6a2a2
+  border-radius: 50% 
+
+.partners
+  padding: 90px 0
+  overflow: hidden
+  &-slider 
+    margin: 60px 0
+    .slick-active.slick-center
+      background-color: #ffffff
+        
+  &-item 
+    min-width: 255px
+    height: 80px!important
+    background-color: #181d24
+    border-radius: 5px
+    margin: 0 15px
+    display: block
+    padding: 10px 15px
+    img 
+      object-fit: contain
+      margin: 0 auto
+  &__offer-img_mob
+    width: 100%
+    height: 665px
+    display: none 
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    pointer-events: none
+
+.partners__offer
+  max-width: 1140px
+  width: 100%
+  margin: 0 auto
+  padding: 0 15px
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+  min-height: 600px 
+  position: relative
+  &-right 
+    max-width: 450px
+    width: 100%
+    padding: 55px 0
+    .btn 
+      margin-top: 55px
+  &-left 
+    max-width: 450px
+    width: 100%
+  &-img 
+    position: absolute
+    width: 990px 
+    height: 975px
+    left: -200px
+    bottom: -230px
+    pointer-events: none 
+    z-index: -1
+
+.offer-img-mob
+  width: 100%
+  height: 297px
+  object-fit: contain 
+  margin: 40px auto 30px
+  display: none
+    
+@import "modules/modules";
+  
+.range 
+  height: 5px
+  border-radius: 2.5px
+  outline: none
+  margin-top: 35px
+  width: calc(100% - 5px)
+  position: relative
+  &:before 
+    content: ''
+    position: absolute
+    right: -5px
+    top: 0
+    height: 5px
+    width: 7px
+    border-radius: 0 2.5px 2.5px 0
+    background: #ffffff
+
+.ui-widget.ui-widget-content
+  border: none
+  border-radius: 2.5px
+
+.ui-slider .ui-slider-range
+  background-color: #f1c40f
+  border-radius: 2.5px
+
+.ui-slider .ui-slider-handle
+  border-radius: 50% 
+  width: 28px
+  height: 28px
+  background-color: #f1c40f
+  outline: none
+  top: 50% 
+  transform: translateY(-50%)
+  border: none
+  &:before
+      content: ''
+      position: absolute 
+      left: 0
+      top: 0
+      background: url("../img/range.svg") no-repeat center / 12px
+      width: 100% 
+      height: 100%
+      z-index: 2
+
+.slide 
+  margin: 0 15px 
+  position: relative
+  z-index: 1
+  height: 100%
+  min-height: 513px
+  outline: none
+  &__content
+    padding: 116.5px 30px 35px 30px
+    display: flex 
+    flex-direction: column 
+    justify-content: space-between
+    min-height: 450.5px
+    border-radius: 10px
+    hr 
+      margin: 25px 0
+    .fs-18
+      margin-bottom: 3px
+  &-bg
+    background: url("../img/rounded-slide.png") no-repeat center
+    height: calc(100% - 62.5px)
+    width: 100%
+    position: absolute 
+    left: 0 
+    top: 62.5px
+    object-fit: fill
+    pointer-events: none
+    transition: all 0.3s ease
+    z-index: -1
+
+.slick-dots 
+  display: flex 
+  justify-content: center 
+  flex-wrap: wrap 
+  margin-top: 40px
+  width: 100%
+  li 
+    margin: 0 5px
+    padding: 0
+    button 
+      border-radius: 50%  
+      width: 16px 
+      height: 16px 
+      border: 2px solid #707d8c
+      background: transparent 
+      color: transparent
+    &.slick-active button
+      background: #f1c40f
+      border-color: #f1c40f
+
+
+.relative
+  position: relative
+
+.bg-red 
+  background-color: #e30000
+
+.bg-yellow
+  background-color: #f1c40f
+
+.w-100
+    width: 100%
+
+.mt-20 
+  margin-top: 20px
+
+.d-sm-block
+  display: none 
+
+.line-clamp
+  display: block
+  display: -webkit-box
+  -webkit-box-orient: vertical
+  position: relative
+  line-height: 22px
+  overflow: hidden
+  text-overflow: ellipsis
+
+.line-clamp:after
+  content: '...'
+  text-align: center
+  bottom: 0
+  right: 0
+  width: 25%
+  display: block
+  position: absolute
+  height: calc(1em * 22px)
+  background: linear-gradient(to left, rgba(241, 242, 246, 0.1), rgba(241, 242, 246, 0.5) 75%)
+
+@supports (-webkit-line-clamp: 7)
+  .line-clamp:after
+    display: none !important
+  .line-clamp
+    -webkit-line-clamp: 7
+    height: calc(1em * 22px * 7)
+
+@import "utils/media";
