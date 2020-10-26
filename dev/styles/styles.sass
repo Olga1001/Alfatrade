@@ -107,10 +107,11 @@ input
   border: 1px solid #e6e6e6
   border-radius: 25px
   line-height: 22px 
-  padding: 19px
+  padding: 13px 20px 13px 78px
   font-size: 16px
   font-weight: 400
   color: #12161c
+  width: 100%
 
 .input_v2 
   border-radius: 3px
@@ -163,6 +164,105 @@ hr
   padding: 0
   border: none
 
+.icon-arrow-right 
+  width: 20px 
+  height: 20px 
+
+.form 
+  max-width: 411px
+  width: 100% 
+  margin: 0 auto
+  &-white 
+    padding: 0 30px 30px
+    background-color: #ffffff
+    position: relative
+    padding-top: 95px
+    border-radius: 10px 10px 0 0
+  &-link 
+    font-size: 12px
+    line-height: 22px
+    font-weight: 400
+    color: #707d8c
+    text-align: center
+    display: block
+    margin-top: 20px
+    &:hover 
+      color: #1b2129
+  &-dark
+    padding: 30px 30px 25px 30px
+    background-color: #1b2129
+    border-radius: 0px 0px 10px 10px
+    .btn 
+      margin: 0 auto
+      min-width: 219px
+      padding: 0 20px
+      svg 
+        position: absolute 
+        top: 50% 
+        right: 30px
+        transform: translateY(-50%)
+  &__footer
+    border-top: 1px solid #232b35
+    padding-top: 25px
+    margin-top: 30px
+    .c-red 
+      display: flex 
+      align-items: center
+
+.field
+  margin-top: 30px 
+  position: relative
+  &-left
+    position: absolute
+    pointer-events: none 
+    left: 0 
+    top: 50% 
+    transform: translateY(-50%)
+    height: 25px
+    width: 58px 
+    border-right: 1px solid #e6e6e6
+    svg 
+      width: 18px
+      height: 100%
+      fill: #b3b3b3
+      margin: 0 auto
+      display: block
+  &-right 
+    background: none
+    position: absolute
+    right: 20px
+    top: 50% 
+    transform: translateY(-50%)
+    svg
+      width: 20px
+      height: 20px
+      fill: #b3b3b3
+  &-checkbox 
+    margin-top: 25px
+    .fs-14 
+      line-height: 18px
+
+.line 
+  width: 100% 
+  height: 1px 
+  background-color: #e6e6e6
+  margin-top: 30px 
+
+.circle 
+  width: 125px
+  height: 125px
+  background-color: #f1c40f
+  border-radius: 50% 
+  position: absolute 
+  top: -65px 
+  left: 50%
+  transform: translateX(-50%)
+  svg 
+    width: 73px
+    height: 100%
+    margin: 0 auto 
+    display: block
+
 .offer 
   // min-height: calc(100vh - 100px)
   overflow: hidden
@@ -176,6 +276,7 @@ hr
   &-right 
     position: relative
     width: 50%
+
 .bg-1
   position: absolute
   left: -293px
@@ -244,7 +345,18 @@ hr
   display: block 
   margin: 0 auto
   height: 60px
+  width: 100%
   fill: #f0b90b
+
+.check 
+  width: 16px
+  height: 16px
+  background-color: #ffffff
+  border: 1px solid #e6e6e6
+  border-radius: 2px
+  display: block 
+  margin-right: 14px 
+  flex-shrink: 0 
 
 .checkbox 
   display: none 
@@ -362,6 +474,16 @@ hr
   object-fit: contain 
   margin: 40px auto 30px
   display: none
+
+.sign 
+  padding: 4vh 15px 8vh
+  min-height: calc(100vh - 456px)
+  width: 100%
+  background: linear-gradient(rgba(#0b0e11, 0.86)), url("../img/bg_4.png") no-repeat center top/ cover
+  .logo-icon 
+    width: 91px
+    height: 80px
+    margin: 0 auto 15vh
     
 @import "modules/modules";
   
@@ -459,7 +581,6 @@ hr
       background: #f1c40f
       border-color: #f1c40f
 
-
 .relative
   position: relative
 
@@ -474,6 +595,12 @@ hr
 
 .mt-20 
   margin-top: 20px
+
+.ml-15
+  margin-left: 15px 
+
+.ml-5
+  margin-left: 5px 
 
 .d-sm-block
   display: none 

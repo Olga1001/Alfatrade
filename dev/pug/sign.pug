@@ -1,0 +1,35 @@
+extends layout/only-footer
+
+block variables
+	-var title = 'Вход'
+
+block content
+	.sign
+		a.logo(href="#")
+			img.logo-icon(src="img/logo.svg", alt="logo")
+		form.form 
+			.form-white 
+				.circle
+					+icon("login")
+				
+				h2.fs-40.fw-bold.text-center.c-dark Вход
+					+icon("title_element", "title-shape")
+				p.c-gray.text-center Войдите, чтобы продолжить
+				.field
+					.field-left
+						+icon("user")
+					input(type="text" placeholder="Логин" required)
+				.field
+					.field-left
+						+icon("lock")
+					input(type="password" placeholder="Пароль" required)
+				a.form-link(href="#") Забыли пароль?
+			.form-dark 
+				button.btn.bg-yellow(type="submit") Войти
+					+icon("enter")
+				.form__footer
+					p.fs-14.flex-wrap.flex-center-between У Вас все еще нет аккаунта?  
+						a.c-red.fs-14(href="#") Регистрация
+							+icon("arrow-right", "c-red ml-15")
+
+

@@ -1,0 +1,55 @@
+extends layout/only-footer
+
+block variables
+	-var title = 'Регистрация'
+
+block content
+	.sign
+		a.logo(href="#")
+			img.logo-icon(src="img/logo.svg", alt="logo")
+		form.form 
+			.form-white 
+				.circle
+					+icon("registration")
+				
+				h2.fs-40.fw-bold.text-center.c-dark Регистрация
+					+icon("title_element", "title-shape")
+				p.c-gray.flex-center-center Уже есть аккаунт? 
+					a.c-red.ml-5(href="#") Войти
+						+icon("arrow-right", "c-red ml-5")
+				.field
+					.field-left
+						+icon("user")
+					input(type="text" placeholder="Логин" required)
+				.field
+					.field-left
+						+icon("email")
+					input(type="email" placeholder="E-mail" required)
+				.field
+					.field-left
+						+icon("lock")
+					input(type="password" placeholder="Пароль" required)
+					button.field-right(type="button")
+						+icon("hide")
+				hr.line
+				.field
+					.field-left
+						+icon("user")
+					input(type="text" placeholder="Ваше Имя" required)
+				.field
+					.field-left
+						+icon("user")
+					input(type="text" placeholder="Ваша Фамилия" required)
+				label.d-flex.field-checkbox 
+					input.checkbox(type="checkbox")
+					span.check 
+					span.fs-14.c-gray Я согласен с условиями использования сервиса Avalon Technologies, а также на получения email и sms рассылок
+			.form-dark 
+				button.btn.bg-yellow(type="submit") Войти
+					+icon("enter")
+				.form__footer
+					p.fs-14.flex-wrap.flex-center-between У Вас все еще нет аккаунта?  
+						a.c-red.fs-14(href="#") Регистрация
+							+icon("arrow-right", "c-red ml-15")
+
+
