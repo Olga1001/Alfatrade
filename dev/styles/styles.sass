@@ -102,6 +102,9 @@ p
   font-size: 16px 
   line-height: 22px 
 
+strong
+  font-weight: 600 
+  
 input
   background-color: #ffffff
   border: 1px solid #e6e6e6
@@ -357,6 +360,16 @@ hr
   display: block 
   margin-right: 14px 
   flex-shrink: 0 
+  position: relative
+  svg 
+    fill: #ffffff 
+    width: 80%
+    height: 100%
+    object-fit: contain
+    position: absolute
+    left: 50% 
+    transform: translateX(-50%)
+    top: 0
 
 .checkbox 
   display: none 
@@ -368,6 +381,12 @@ hr
     color: #12161c
     .check-payment__circle 
       background-color: #f1c40f
+  &:checked ~ .check 
+    background-color: #f1c40f
+    border-color: #f1c40f
+
+
+    
     
 .section-calculator__content 
   padding: 60px 0
@@ -485,6 +504,41 @@ hr
     height: 80px
     margin: 0 auto 15vh
     
+.terms
+  &-box 
+    background-color: #1b2129
+    box-shadow: 0px 0px 50px 0px rgba(1,1,1,0.2)
+    border-radius: 10px
+    max-width: 1110px
+    width: 100% 
+    margin: 30px auto 80px
+    padding: 60px 15px
+  &-content  
+    max-width: 915px 
+    width: 100% 
+    margin: 41px auto 0
+    p 
+      margin-bottom: 20px
+
+.list
+  padding-top: 13px
+  &-item 
+    margin-bottom: 15px 
+    &:last-child
+      margin-bottom: 0
+  &-left 
+    margin-right: 30px
+  &-right 
+    padding-top: 7px
+
+.verticatl-line
+  height: calc(100% - 22px - 30px)
+  width: 1px 
+  background: #707d8c
+  display: block
+  margin-left: auto
+  margin-right: 3px
+
 @import "modules/modules";
   
 .range 
@@ -601,6 +655,9 @@ hr
 
 .ml-5
   margin-left: 5px 
+
+.mt-10 
+  margin-top: 10px 
 
 .d-sm-block
   display: none 
